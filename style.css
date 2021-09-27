@@ -8,7 +8,8 @@
 }
 header{
     background-color: #43aa43c5;
-    width: 80%;
+    width: 90%;
+    height: 10vh;
     margin: auto;
 }
 #nav{
@@ -19,7 +20,6 @@ header{
 .nav_links{
     background-color: cornflowerblue;
     width: 15%;
-    height: 3em;
     list-style: none;
     display: flex;
     justify-content: center;
@@ -34,11 +34,13 @@ header{
     text-decoration: none;
 }
 main{
-    width: 80%;
-    height: 75vw;
+    width: 90%;
+    height: 30vh;
     background-color: burlywood;
     margin: auto;
     display: flex;
     align-items: center;
     text-align: center;
+    padding: 2em;
+    box-sizing: border-box;
 }
