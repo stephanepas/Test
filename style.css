@@ -12,10 +12,14 @@ header{
     height: 10vh;
     margin: auto;
 }
-#nav{
+nav{
     background-color: coral;
+    height: inherit;
+}
+#nav{
     display: flex;
     justify-content: space-between;
+    height: inherit;
 }
 .nav_links{
     background-color: cornflowerblue;
