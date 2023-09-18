@@ -2,49 +2,205 @@
     display: flex;
     justify-content: center;
 } */
-*{
-    margin: 0;
-    padding:0
+* {
+  margin: 0;
+  padding: 0;
 }
-header{
-    background-color: #43aa43c5;
-    width: 90%;
-    height: 10vh;
-    margin: auto;
+header {
+  background-color: #43aa43c5;
+  width: 90%;
+  height: 10vh;
+  margin: auto;
 }
-nav{
-    background-color: coral;
-    height: inherit;
+nav {
+  background-color: coral;
+  height: inherit;
 }
-#nav{
-    display: flex;
-    justify-content: space-between;
-    height: inherit;
+#nav {
+  display: flex;
+  justify-content: space-between;
+  height: inherit;
 }
-.nav_links{
-    background-color: cornflowerblue;
-    width: 15%;
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.nav_links {
+  background-color: cornflowerblue;
+  width: 15%;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.nav_links:hover{
-    background-color: red;
+.nav_links:hover {
+  background-color: red;
 }
 
-.nav_links a{
-    color: white;
-    text-decoration: none;
+.nav_links a {
+  color: white;
+  text-decoration: none;
 }
-main{
-    width: 90%;
-    height: 30vh;
-    background-color: burlywood;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    padding: 2em;
-    box-sizing: border-box;
+main {
+  width: 90%;
+  /* height: 30vh; */
+  background-color: rgb(255, 255, 255);
+  margin: auto;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  padding: 2em;
+  box-sizing: border-box;
+  flex-direction: column;
+}
+h1 {
+  writing-mode: vertical-rl;
+  text-orientation:sideways-left;
+}
+button {
+  width: 400px;
+  height: 200px;
+  margin: 10vh 0;
+  background-color: #b00f0f;
+  color: #f4f8f3;
+  font-size: 48px;
+  border-radius: 60% 40% 5% 5% / 40% 20% 5% 5%;
+  border: none;
+  transition: 500ms ease-in-out;
+}
+button:hover {
+  border-radius: 16px;
+}
+#but1:hover {
+  background-color: #c03f3f;
+}
+#but2:hover {
+  background-color: #8d0c0c;
+}
+#box1 {
+  background-color: bisque;
+  width: 200px;
+  height: 50vh;
+  position: relative;
+  z-index: 10;
+}
+#box2 {
+  background-color: red;
+  width: 100px;
+  height: 10vh;
+  position: relative;
+  top: -15vh;
+  z-index: 10;
+}
+#box2_1{
+  background-color: rgb(0, 255, 221);
+  width: 50px;
+  height: 5vh;
+  position: relative;
+  z-index: 1;
+  right: -125px;
+}
+.card:before {
+  content: '';
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.7);
+  top: -30px;
+  left: -10px;
+  right: -20px;
+  height: 150px;
+  transform: rotate(8deg);
+  box-shadow: 0 0 20px #000;
+}
+.card {
+  background-color: rgba(255, 170, 0, 0.4);
+  backdrop-filter: blur(5px);
+  padding: 30px 80px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 30px #000;
+}
+.card .profile {
+  background-image: url('https://fixthephoto.com/blog/UserFiles/double-exposure-self-portrait-photography-actions-before.jpg');
+  height: 160px;
+  width: 160px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  border: 3px solid rgb(255, 180, 29);
+  z-index: 1;
+}
+.card .info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+}
+.card .info b {
+  font-size: 24px;
+}
+footer {
+  height: 10vh;
+  padding: 2vh 2vw;
+}
+#eb_n text {
+  animation: move_eb_n 5s 2s forwards;
+}
+#osges text {
+  animation: move_osges 5s 2s forwards;
+}
+:is(#v, #w) path {
+  stroke: black;
+  transition: stroke 0.5s;
+}
+#i path {
+  fill: rgb(176, 15, 15);
+  animation: move_i 5s 2s forwards;
+  transition: fill 0.5s;
+}
+#v path {
+  animation: move_v 5s 2s forwards;
+}
+#w path {
+  animation: move_w 5s 2s forwards;
+}
+footer a:hover #i path {
+  fill: black;
+}
+footer a:hover :is(#v path, #w path) {
+  stroke: rgb(176, 15, 15);
+}
+
+@keyframes move_eb_n {
+  from {
+    opacity: 1;
+  }
+  to {
+    transform: translateY(10%);
+    opacity: 0;
+  }
+}
+@keyframes move_osges {
+  from {
+    opacity: 1;
+  }
+  to {
+    transform: translate(-14%, 10%);
+    opacity: 0;
+  }
+}
+@keyframes move_i {
+  to {
+    transform: translate(-17%, 25%);
+  }
+}
+@keyframes move_v {
+  to {
+    transform: translate(34%, 25%);
+  }
+}
+@keyframes move_w {
+  to {
+    transform: translate(40%, 25%);
+  }
 }
